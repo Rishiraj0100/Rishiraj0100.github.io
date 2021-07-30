@@ -14,7 +14,7 @@
 #open_nav {
   width: 35px;
   height: 5px;
-  background-color: black;
+  background-color: white;
   margin: 6px 0;
 }
 
@@ -40,6 +40,7 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  color: white;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
