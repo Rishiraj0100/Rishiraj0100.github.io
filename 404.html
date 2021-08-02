@@ -32,8 +32,32 @@ a {
 <meta property="og:title" content="404 | Page Not Found" />
 <meta property="og:description" content="Sorry, this page was not found on server" />
 <meta name="viewport" content="width-device-width, initial-scale=1" />
+<link rel="stylesheet" href="navigation.css" />
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 </head>
 <body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/">Home</a>
+  <a href="https://top.gg/bot/768680278604382238/">Mts Bot</a>
+  <a href="https://api.rrrdev.cf">Api</a>
+  <a href="https://dcbots.cf/">Discord Bot List</a>
+  <a href="javascript:history.back()">Back</a>
+</div>
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()">
+  <div id="open_nav"></div>
+  <div id="open_nav"></div>
+  <div id="open_nav"></div>
+</span>
 <h1>404 | Page Not Found</h2>
 <p>
   Sorry, the page you are looking for is not found.<br />
