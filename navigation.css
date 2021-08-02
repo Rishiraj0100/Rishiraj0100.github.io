@@ -27,6 +27,9 @@
   display: block;
   transition: 0.3s;
   animation: TextAnimation ease 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  position: absolute;
 }
 @keyframes TextAnimation {
   0% {
