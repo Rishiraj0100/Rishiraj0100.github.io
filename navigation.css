@@ -26,21 +26,7 @@
   color: #818181;
   display: block;
   transition: 0.3s;
-  animation: TextAnimation ease 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
   position: absolute;
-}
-@keyframes TextAnimation {
-  0% {
-    font-size: 0px;
-  }
-  50% {
-    font-size: 13px;
-  }
-  100% {
-    font-size: 26px;
-  }
 }
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
