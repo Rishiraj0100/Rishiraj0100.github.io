@@ -10,7 +10,7 @@ function typeWrite(elem, txt, i) {
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   for (i2 = 0; i2 < toWrite.length; i2++) {
-    t = toWrite[i2].innerHTML
+    t = toWrite[i2].innerHTML;
     toWrite[i2].innerHTML = ''
     typeWrite(toWrite[i2], t, 0)
 }
