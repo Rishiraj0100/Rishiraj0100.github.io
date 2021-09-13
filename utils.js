@@ -7,7 +7,7 @@ function closeNav() {
 }
 var i = 0;
 var speed = 200;
-var toWrite = document.getElementById("typewrite");
+var toWrite = document.getElementsByClassName("typewrite");
 function typeWrite() {
   for (i2 = 0; i2 < toWrite.length; i2++) {
     i = 0
