@@ -1,10 +1,3 @@
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  typeWrite()
-}
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
 var i = 0;
 var speed = 200;
 var toWrite = document.getElementsByClassName("typewrite");
@@ -19,4 +12,11 @@ function typeWrite() {
       setTimeout(typeWrite, speed);
     }
   }
+}
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  typeWrite()
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
 }
