@@ -6,7 +6,7 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 var i = 0;
-var speed = 50;
+var speed = 200;
 var toWrite = document.getElementById("typewrite");
 function typeWrite() {
   for (i2 = 0; i2 < toWrite.length; i2++) {
