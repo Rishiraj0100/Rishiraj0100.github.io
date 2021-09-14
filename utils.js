@@ -1,3 +1,4 @@
+// typing
 const typed = new Typed(".typing", {
   strings: [
     "Hello There!",
@@ -18,6 +19,7 @@ const typed = new Typed(".typing", {
   backSpeed: 40,
 });
 
+// Navigation
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
