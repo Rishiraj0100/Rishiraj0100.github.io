@@ -1,5 +1,5 @@
 const typed = new Typed(".typing", {
-  strings: ["Coder", "Pythonist", "Discord Bot Creator", "Web Developer", "Student", "Human"],
+  strings: ["Coder", "Discord Bot Creator", "Web Developer", "Student"],
   loop: true,
   typeSpeed: 80,
   backSpeed: 40,
