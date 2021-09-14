@@ -11,13 +11,13 @@
   transition: 0.5s;
 }
 
+/*Three lines*/
 #open_nav {
   width: 35px;
   height: 5px;
   background-color: white;
   margin: 6px 0;
 }
-
 .openNavDiv {
   border: 2px solid white;
   padding-left: 3px;
