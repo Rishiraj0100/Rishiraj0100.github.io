@@ -1,5 +1,3 @@
-import Typed from 'typing.js'
-
 const typed = new Typed(".typing", {
   strings: ["Coder", "Pythonist", "Discord Bot Creator", "Web Developer", "Student", "Human"],
   loop: true,
