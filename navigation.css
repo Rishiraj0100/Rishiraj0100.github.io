@@ -17,6 +17,10 @@
   margin: 6px 0;
 }
 
+.openNavDiv {
+  border: 2px sloid white;
+  padding-left: 3px;
+  padding-top: 2px;
 
 .sidenav a {
   padding: 8px 8px 8px 32px;
