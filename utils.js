@@ -1,5 +1,8 @@
 const typed = new Typed(".typing", {
   strings: [
+    "Hello There!",
+    "I am RishiDev",
+    "I like coding",
     "I am a Coder",
     "I am a Discord Bot Creator",
     "I am a Pythonist", "Web Developer",
