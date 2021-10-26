@@ -37,8 +37,8 @@ executeCodeBtn.addEventListener("click", () => {
   console_.innerText = "Processing....";
   try {
     fetch(url)
-      .then((response) => response.json())
-      .then((data) => (console_.innerText = data["stdout"] + data["stderr"]));
+      .then((response) => {response.json()})
+      .then((data) => {console_.innerText = data["stdout"] + data["stderr"]});
   } catch (err) {
     console.error(err);
   }
