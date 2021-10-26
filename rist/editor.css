@@ -65,9 +65,9 @@ h1 {
   display: flex;
 }
 
-.editor__footer--right {
+.editor__footer--center {
   flex: 1;
-  margin-left: 10px;
+  margin-left: 0.5px;
   overflow: hidden;
 }
 
