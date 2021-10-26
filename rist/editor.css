@@ -27,9 +27,6 @@ body {
 .mobile-only {
   display: none;
 }
-@media screen and (max-height: 450px) {
-     .mobile-only { display: inline;}
-}
 
 @keyframes gradient {
   0% {
@@ -72,13 +69,13 @@ h1 {
   display: flex;
 }
 
-.editor__footer--center {
+.editor__footer--right, .editor__footer--center {
   flex: 1;
   margin-left: 0.5px;
   overflow: hidden;
 }
 
-.editor__btn {
+.editor__btn, button {
   border: 0;
   padding: 0.5em;
   background-color: #13141f;
@@ -109,3 +106,9 @@ h1 {
   right: 0;
   border: 1px solid var(--editor-border);
 }
+@media screen and (max-height: 450px) {
+  .mobile-only {
+    display: inline;
+  }
+}
+
