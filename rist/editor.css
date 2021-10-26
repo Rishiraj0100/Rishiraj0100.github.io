@@ -16,27 +16,10 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background: linear-gradient(-45deg, #ff0000, #00ff00, #0000ff);
-  animation: gradient 40s ease infinite;
+  background: linear-gradient(-45deg, #5552ee, #222336, #53576e, #d3c6d8);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-}
-
-.mobile-only {
-  display: none;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 h1 {
@@ -63,20 +46,17 @@ h1 {
 }
 
 .editor__body {
+  display: flex;
   flex: 1;
 }
 
 .editor__footer {
-  display: flex;
+  display: none;
 }
 
-.editor__footer--right, .editor__footer--center {
-  flex: 1;
-  margin-left: 0.5px;
-  overflow: hidden;
-}
 
-.editor__btn, button {
+.editor__btn,
+button {
   border: 0;
   padding: 0.5em;
   background-color: #13141f;
@@ -95,6 +75,7 @@ h1 {
   margin-top: 1.2em;
   overflow: auto;
   color: white;
+  display: none;
 }
 
 .editor__code {
@@ -107,9 +88,5 @@ h1 {
   right: 0;
   border: 1px solid var(--editor-border);
 }
-@media screen and (max-height: 450px) {
-  .mobile-only {
-    display: inline;
-  }
-}
+
 
