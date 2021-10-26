@@ -24,6 +24,13 @@ body {
   background-attachment: fixed;
 }
 
+.mobile-only {
+  display: none;
+}
+@media screen and (max-height: 450px) {
+     .mobile-only { display: inline;}
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
