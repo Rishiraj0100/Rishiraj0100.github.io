@@ -19,25 +19,18 @@
         <div class="editor__body">
           <div id="editorCode" class="editor__code"></div>
         </div>
-        <div class="editor__footer">
-          <div class="editor__footer--center">
+        <div class="editor__console">
             <button class="editor__btn editor__run">Run</button>
             <button class="editor__btn editor__reset">Clear</button>
-          </div><br>
-          <div class="editor__footer--center">
-            <div class="editor__console">
-              <ul class="editor__console-logs"></ul>
-            </div>
-          </div>
+            <ul class="editor__console-logs"></ul>
+        </div>
         </div>
         <br /><br />
         <textarea class="compiled_" disabled="true" rows="10"></textarea>
+        <button class="tablink">Editor</button>
+        <button class="tablink">Console</button>
+        <button class="tablink">Compiled</button>
       </div>
-    </div>
-    <div class="mobile-only">
-      <button class="tablink">Editor</button>
-      <button class="tablink">Console</button>
-      <button class="tablink">Compiled</button>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
     <script src="editor.js"></script>
