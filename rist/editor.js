@@ -12,7 +12,7 @@ let editorLib = {
     // Configure Ace
 
     // Theme
-    codeEditor.setTheme("ace/theme/twilight");
+    // codeEditor.setTheme("ace/theme/twilight");
 
     // Set language
     codeEditor.session.setMode("ace/mode/python");
