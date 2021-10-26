@@ -54,7 +54,7 @@ h1 {
 
 .editor__wrapper {
   display: flex;
-  height: 100%;
+  height: 80%;
   background: var(--editor-bg);
   padding: 2em;
   border-radius: 3px;
