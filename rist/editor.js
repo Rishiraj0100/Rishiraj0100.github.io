@@ -5,14 +5,14 @@ const console_ = document.querySelector(".editor__console");
 
 // Setup Ace
 let codeEditor = ace.edit("editorCode");
-let defaultCode = 'output "Hello World!"';
+let defaultCode = 'print{"Hello World!"};';
 
 let editorLib = {
   init() {
     // Configure Ace
 
     // Theme
-    codeEditor.setTheme("ace/theme/dracula");
+    codeEditor.setTheme("ace/theme/twilight");
 
     // Set language
     codeEditor.session.setMode("ace/mode/python");
