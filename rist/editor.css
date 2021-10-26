@@ -16,9 +16,8 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background: linear-gradient(-45deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
-  background-size: 400% 400%;
-  animation: gradient 50s ease infinite;
+  background: linear-gradient(-45deg, #ff0000, #00ff00, #0000ff);
+  animation: gradient 40s ease infinite;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -55,6 +54,7 @@ h1 {
 
 .editor__wrapper {
   display: flex;
+  height: 100%;
   background: var(--editor-bg);
   padding: 2em;
   border-radius: 3px;
