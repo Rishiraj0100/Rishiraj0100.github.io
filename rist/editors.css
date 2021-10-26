@@ -38,7 +38,6 @@ h1 {
   display: none;
 }
 .editor__wrapper {
-  display: flex;
   height: 80%;
   background: var(--editor-bg);
   padding: 2em;
@@ -48,8 +47,7 @@ h1 {
 }
 
 .editor__body {
-  display: flex;
-  flex: 1;
+  display: block;
 }
 
 .editor__footer {
