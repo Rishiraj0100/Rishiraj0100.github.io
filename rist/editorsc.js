@@ -49,7 +49,7 @@ resetCodeBtn.addEventListener("click", () => {
   codeEditor.setValue("");
 });
 function toggTab(evt, clsname) {
-  tc=document.getElementByClassName("tc")
+  tc=document.getElementsByClassName("tc")
   for (i = 0; i < tc.length; i++) {
     tc[i].style.display = "none";
   }
