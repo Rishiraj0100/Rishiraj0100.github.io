@@ -53,7 +53,7 @@ function toggTab(evt, clsname) {
   for (i = 0; i < tc.length; i++) {
     tc[i].style.display = "none";
   }
-  document.getElementByClassName(clsname).style.display = "flex";
+  document.getElementByClassName(clsname).style.display = "block";
 }
 editorLib.init();
 
