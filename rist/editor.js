@@ -40,7 +40,7 @@ executeCodeBtn.addEventListener("click", () => {
       .then((response) => {response.json()})
       .then((data) => {console_.innerText = data["stdout"] + data["stderr"]});
   } catch (err) {
-    console.error(err);
+    console_.innerText = err;
   }
 });
 
