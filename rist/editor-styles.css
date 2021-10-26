@@ -52,7 +52,7 @@ h1 {
 }
 
 .editor__wrapper {
-  width: 60%;
+  width: 80%;
   height: 80%;
   display: flex;
   flex-direction: column;
