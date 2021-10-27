@@ -12,7 +12,7 @@ let editorLib = {
   init() {
     // Configure Ace
 
-    ace.config.set('basePath', 'https://unpkg.com/ace-builds@1.4.12/src-noconflict/');
+    ace.config.set('basePath', 'https://unpkg.com/ace-builds@1.4.12/src-noconflict');
 
     // Theme
     codeEditor.setTheme("ace/theme/twilight");
