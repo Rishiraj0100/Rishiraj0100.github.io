@@ -34,9 +34,7 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-.compiled_ {
-  display: none;
-}
+
 .editor__wrapper {
   height: 80%;
   background: var(--editor-bg);
@@ -46,20 +44,12 @@ h1 {
   box-shadow: 0 0 5px #9ecaed;
 }
 
-.editor__body {
-  display: flex;
-}
-
-.editor__footer {
-  display: none;
-}
-
 button {
   border: 0;
   padding: 0.5em;
   background-color: #13141f;
   margin-top: 1.8em;
-  width: 80px;
+  width: 90px;
   box-shadow: 0 0 6px #9ecaed;
   cursor: pointer;
   color: white;
@@ -85,6 +75,5 @@ button {
   left: 0;
   right: 0;
   border: 1px solid var(--editor-border);
-  display: block;
 }
 
