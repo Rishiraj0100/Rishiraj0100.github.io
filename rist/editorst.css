@@ -47,15 +47,13 @@ h1 {
 }
 
 .editor__body {
-  display: block;
+  display: flex;
 }
 
 .editor__footer {
   display: none;
 }
 
-
-.editor__btn,
 button {
   border: 0;
   padding: 0.5em;
@@ -87,6 +85,6 @@ button {
   left: 0;
   right: 0;
   border: 1px solid var(--editor-border);
+  display: block;
 }
-
 
