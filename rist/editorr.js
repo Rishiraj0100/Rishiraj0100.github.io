@@ -4,28 +4,14 @@ const resetCodeBtn = document.querySelector(".editor__reset");
 const console_ = document.querySelector(".editor__console");
 const co_ = document.querySelector(".compiled_");
 
-// Setup Ace
-let codeEditor = ace.edit("editorCode");
+let codeEditor = co_;
 let defaultCode = 'print{"Hello World!"};';
 
-let editorLib = {
-  init() {
-    // Theme
-    codeEditor.setTheme("ace/theme/twilight");
-
-    // Set language
-    codeEditor.session.setMode("ace/mode/python");
-    codeEditor.setFontSize(22);
-
-    // Set Default Code
-    codeEditor.setValue(defaultCode);
-  }
-};
-
+codeEditor.text = defaultCode;
 // Events
 executeCodeBtn.addEventListener("click", () => {
   // Get input from the code editor
-  const userCode = codeEditor.getValue();
+  const userCode = codeEditor.text;
   const params = { code: userCode };
 
   const url = "https://pyrist.herokuapp.com/api/run?" + new URLSearchParams(params);
@@ -44,8 +30,7 @@ executeCodeBtn.addEventListener("click", () => {
 
 resetCodeBtn.addEventListener("click", () => {
   // Clear ace editor
-  codeEditor.setValue("");
+  codeEditor.text = "";
 });
 
-editorLib.init();
 
