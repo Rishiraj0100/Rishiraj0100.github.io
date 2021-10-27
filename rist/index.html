@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="editor.css" />
+    <!-- <link rel="stylesheet" href="editor.css" /> -->
     <title>Rist IDE</title>
     <meta name="description" content="An Online IDE for Rist lang" />
     <meta content="#f92672" name="theme-color" />
+    <style>
+.editor__console {
+  background-color: black;
+}
+    </style>
   </head>
-
   <body>
     <div>
       <h1 id="heading">Rist Lang</h1>
@@ -16,7 +20,7 @@
     <div class="editor">
       <div class="editor__wrapper">
         <div class="editor__body tc">
-          <div id="editorCode" class="editor__code"></div>
+          <textarea rows="10"></textarea>
         </div>
         <div class="editor__console tc">
             <button class="editor__btn editor__run">Compile</button>
@@ -30,7 +34,7 @@
         <button class="tablink" onlclick="toggTab('compiled_');">Compiled</button> -->
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script> -->
     <script src="editor.js"></script>
     <script>
       head = document.getElementById("heading");
