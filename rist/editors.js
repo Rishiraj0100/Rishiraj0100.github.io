@@ -2,6 +2,7 @@
 const executeCodeBtn = document.querySelector(".editor__run");
 const resetCodeBtn = document.querySelector(".editor__reset");
 const console_ = document.querySelector(".editor__console");
+const co_ = document.querySelector(".compiled_");
 
 // Setup Ace
 let codeEditor = ace.edit("editorCode");
@@ -38,7 +39,8 @@ executeCodeBtn.addEventListener("click", () => {
   try {
     fetch(url)
       .then((response) => response.json())
-      .then((data) => (console_.innerText = data["stdout"] + data["stderr"]));
+      .then((data) => (co_.text = data['stdout']))
+      .then((data) => (console_.innerText = data['stderr']));
   } catch (err) {
     console_.innerText = err;
   }
