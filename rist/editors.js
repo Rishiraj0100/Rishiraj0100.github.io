@@ -22,7 +22,7 @@ let editorLib = {
 
     // Set Default Code
     codeEditor.setValue(defaultCode);
-  },
+  }
 };
 
 // Events
