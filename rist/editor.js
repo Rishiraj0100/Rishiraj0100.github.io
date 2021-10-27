@@ -48,7 +48,7 @@ resetCodeBtn.addEventListener("click", () => {
   // Clear ace editor
   codeEditor.setValue("");
 });
-function toggTab(evt, clsname) {
+function toggTab(clsname) {
   tc=document.getElementsByClassName("tc")
   for (i = 0; i < tc.length; i++) {
     tc[i].style.display = "none";
