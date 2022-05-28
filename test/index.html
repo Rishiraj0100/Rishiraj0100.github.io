@@ -11,20 +11,19 @@ body {
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-const ip, rg, co, tz;
 function a() {
   $.getJSON('https://ipinfo.io/json', function(data) {
-    ip=data.ip;
-    rg=data.region;
-    co=data.country;
-    tz=data.timezone;
+    var ip=data.ip;
+    var rg=data.region;
+    var co=data.country;
+    var tz=data.timezone;
+    document.cookie="ip="+ip;
+    document.cookie="rg="+rg;
+    document.cookie="co="+co;
+    document.cookie="tz="+tz;
   });
-  document.cookie="ip=${ip}";
-  document.cookie="rg=${rg}";
-  document.cookie="co=${co}";
-  document.cookie="tz=${tz}";
 }
-if !document.cookie {
+if (!document.cookie.split("; ").find(r => r.startsWith("ip="))) {
   const vef=false;
   a();
 } else {
