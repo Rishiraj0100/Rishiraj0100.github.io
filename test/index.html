@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+</script>
+<style>
+body {
+  background-color: black;
+  color: white;
+}
+</style>
+<script>
+function a() {
+  $.getJSON('https://ipinfo.io/json', function(data) {
+    alert(JSON.stringify(data));
+  });
+}
+</script>
+</head>
+<body>
+<button onclick="a()">Click</button>
+</body>
+</html>
