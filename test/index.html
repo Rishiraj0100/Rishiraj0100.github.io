@@ -9,8 +9,10 @@ body {
   color: white;
 }
 </style>
+<script src="jquery-3.6.0.min.js"></script>
 <script>
 function a() {
+  alert("..");
   $.getJSON('https://ipinfo.io/json', function(data) {
     alert(JSON.stringify(data));
   });
