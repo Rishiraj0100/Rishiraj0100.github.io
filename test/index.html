@@ -11,19 +11,31 @@ body {
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-function b() {
-  alert(process.env);
-  alert("bye");
-}
+const ip, rg, co, tz;
 function a() {
   $.getJSON('https://ipinfo.io/json', function(data) {
-    alert(JSON.stringify(data));
+    ip=data.ip;
+    rg=data.region;
+    co=data.country;
+    tz=data.timezone;
   });
+  document.cookie="ip=${ip};rg=${rg};co=${co};tz=${tz}";
+}
+if !document.cookie {
+  const vef=false;
+} else {
+  const vef=true
+}
+function b() {
+  if vef {
+    alert(document.cookie);
+  } else {
+    alert(vef);
+  }
 }
 </script>
 </head>
 <body>
-<button onclick="a()">Click</button>
 <button onclick="b()">check</button>
 </body>
 </html>
