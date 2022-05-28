@@ -11,9 +11,11 @@ body {
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-function a() {
+function b() {
   alert(process.env.t);
   alert("bye");
+}
+function a() {
   $.getJSON('https://ipinfo.io/json', function(data) {
     alert(JSON.stringify(data));
   });
@@ -22,5 +24,6 @@ function a() {
 </head>
 <body>
 <button onclick="a()">Click Me</button>
+<button onclick="b()">check</button>
 </body>
 </html>
