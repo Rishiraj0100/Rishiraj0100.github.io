@@ -19,7 +19,10 @@ function a() {
     co=data.country;
     tz=data.timezone;
   });
-  document.cookie="ip=${ip};rg=${rg};co=${co};tz=${tz}";
+  document.cookie="ip=${ip}";
+  document.cookie="rg=${rg}";
+  document.cookie="co=${co}";
+  document.cookie="tz=${tz}";
 }
 if !document.cookie {
   const vef=false;
