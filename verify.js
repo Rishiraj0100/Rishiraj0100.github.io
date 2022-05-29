@@ -7,7 +7,7 @@ if (!document.cookie.split("; ").find(r => r.startsWith("ip="))) {
 } else {
   $.getJSON('https://ipinfo.io/json', function(data) {
     var ip=data.ip;
-    if (document.cookie.split("; ").find(r => r.startsWith("ip="))!=ip) {
+    if (document.cookie.split("; ").find(r => r.startsWith("ip=")).split("=")[1]!=ip) {
       red();
     }
   });
