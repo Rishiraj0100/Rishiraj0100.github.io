@@ -8,8 +8,6 @@ if (!document.cookie.split("; ").find(r => r.startsWith("ip="))) {
   $.getJSON('https://ipinfo.io/json', function(data) {
     var ip=data.ip;
     if (document.cookie.split("; ").find(r => r.startsWith("ip=")).split("=")[1]!=ip) {
-      alert(document.cookie.split("; ").find(r => r.startsWith("ip=")).split("=")[1]);
-      alert(ip);
       red();
     }
   });
