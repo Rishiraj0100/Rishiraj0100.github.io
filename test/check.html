@@ -1,8 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://raw.githubusercontent.com/Rishiraj0100/Rishiraj0100.github.io/main/verify.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+function red() {
+  document.cookie = "hr="+window.location.href;
+  window.location.href = "https://rrrdev.cf/test";
+}
+if (!document.cookie.split("; ").find(r => r.startsWith("ip="))) {
+  red();
+} else {
+  $.getJSON('https://ipinfo.io/json', function(data) {
+    var ip=data.ip;
+    if (document.cookie.split("; ").find(r => r.startsWith("ip=")).split("=")[1]!=ip) {
+      alert(document.cookie.split("; ").find(r => r.startsWith("ip=")).split("=")[1]);
+      alert(ip);
+      red();
+    }
+  });
+}
+</script>
 </head>
 <body>
 Hi
