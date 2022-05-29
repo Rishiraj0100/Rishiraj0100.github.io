@@ -28,6 +28,7 @@ function vef() {
   } else {
     u = u.split("=")[1]
   }
+  alert(u);
   document.cookie = "hr=href; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   setTimeout(function () {
     window.location.href = u;
