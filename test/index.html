@@ -25,9 +25,11 @@ function vef() {
   var u=document.cookie.split('; ').find(r => r.startsWith('hr='));
   if (!u) {
     u = "https://rrrdev.cf/";
+  } else {
+    u = u.split("=")[1]
   }
-  window.location.href = u;
   document.cookie = "hr=href;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  window.location.href = u;
 }
 setTimeout(vef, 5000);
 </script>
