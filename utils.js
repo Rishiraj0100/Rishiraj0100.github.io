@@ -15,6 +15,7 @@ const typed = new Typed(".typing", {
   loop: true,
   typeSpeed: 80,
   backSpeed: 40,
+  cursorChar: "_"
 });
 
 // Navigation
