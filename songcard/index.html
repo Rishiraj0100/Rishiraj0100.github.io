@@ -33,6 +33,13 @@ main = () => {
   im=new Image()
   im.src=thumbnailURL
   im.addEventListener("load", ()=>{
+    proc()})}
+proc=()=>{
+  params = new URLSearchParams(document.location.search);
+  songTitle = params.get("title")||"Unknown"
+  songArtist = params.get("artist") || "Unknown Artist"
+  trackRequester = params.get("requester") || "Anonymous"
+  thumbnailURL = params.get("thumb") || "static/thumbdef.png"
   const cardWidth = 800;
   const cardHeight = 250;
   
@@ -132,7 +139,6 @@ main = () => {
   const objectURL = URL.createObjectURL(blob);
   location.href=objectURL;
 }, 'image/png');
-  })
 }
 
   </script>
