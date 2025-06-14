@@ -31,6 +31,7 @@ main = () => {
   trackRequester = params.get("requester") || "Anonymous"
   thumbnailURL = params.get("thumb") || "static/thumbdef.png"
   im=new Image()
+  im.crossOrigin = "anonymous"
   im.src=thumbnailURL
   im.addEventListener("load", ()=>{
     proc()})}
