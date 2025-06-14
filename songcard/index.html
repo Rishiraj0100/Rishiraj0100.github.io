@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="main()" style="display:none;">
+  <p>Nothing to see here...</p>
+  <canvas id="canvas">
+    
+  </canvas>
+  <!-- Project -->
+  <img id="bg" src="static/5.jpg" alt="" />
+  <script>
+let f = new FontFace("CustomFont", "url(static/AfacadFlux-Regular.ttf)");
+document.fonts.add(f)
+main = () => {
+  params = new URLSearchParams(document.location.search);
+  songTitle = params.get("title")||"Unknown"
+  songArtist = params.get("artist") || "Unknown Artist"
+  trackRequester = params.get("requester") || "Anonymous"
+  thumbnailURL = params.get("thumb") || "static/thumbdef.png"
+  im=new Image()
+  im.src=thumbnailURL
+  im.addEventListener("load", ()=>{
+  const cardWidth = 800;
+  const cardHeight = 250;
+  
+  const canvas = document.getElementById("canvas")
+  canvas.height=cardHeight
+  canvas.width = cardWidth
+  const ctx = canvas.getContext("2d");
+  
+  fontPath=true
+  
+  // 🎨 Select a random background image
+  const backgroundImage = document.getElementById("bg")
+  
+  // ✅ Draw background image
+  ctx.drawImage(backgroundImage, 0, 0, cardWidth, cardHeight);
+  
+  // 🔥 Add a blur layer on top of the background
+  ctx.fillStyle = "rgba(0, 0, 0, 0.5)"; // Semi-transparent black for blur effect
+  ctx.filter = "blur(10px)"; // Apply blur effect
+  ctx.fillRect(0, 0, cardWidth, cardHeight);
+  ctx.filter = "none"; // Reset filter for other elements
+  
+  // 🖼️ Load the thumbnail image
+  const thumbnailImage = im//backgroundImage//await loadImage(thumbnailURL);
+  const padding = 20;
+  const thumbnailSize = cardHeight - 2 * padding;
+  
+  ctx.save();
+  ctx.beginPath();
+  ctx.moveTo(cardWidth - thumbnailSize - padding + 20, padding);
+  ctx.arcTo(
+    cardWidth - padding,
+    padding,
+    cardWidth - padding,
+    padding + 20,
+    20
+  );
+  ctx.arcTo(
+    cardWidth - padding,
+    cardHeight - padding,
+    cardWidth - padding - 20,
+    cardHeight - padding,
+    20
+  );
+  ctx.arcTo(
+    cardWidth - thumbnailSize - padding,
+    cardHeight - padding,
+    cardWidth - thumbnailSize - padding,
+    cardHeight - padding - 20,
+    20
+  );
+  ctx.arcTo(
+    cardWidth - thumbnailSize - padding,
+    padding,
+    cardWidth - thumbnailSize - padding + 20,
+    padding,
+    20
+  );
+  ctx.closePath();
+  ctx.clip();
+  ctx.drawImage(
+    thumbnailImage,
+    cardWidth - thumbnailSize - padding,
+    padding,
+    thumbnailSize,
+    thumbnailSize
+  );
+  ctx.restore();
+  
+  // 📝 Text styles (placed above blur layer)
+  ctx.fillStyle = "white";
+  ctx.font = fontPath ? "bold 35px 'CustomFont'" : "bold 35px Arial";
+  ctx.textAlign = "left";
+  ctx.textBaseline = "top";
+  
+  const maxWidth = cardWidth - thumbnailSize - padding * 2;
+  let truncatedTitle = songTitle;
+  while (ctx.measureText(truncatedTitle).width > maxWidth) {
+    truncatedTitle = truncatedTitle.slice(0, -1);
+  }
+  if (truncatedTitle.length < songTitle.length) {
+    truncatedTitle = truncatedTitle.slice(0, -3) + "...";
+  }
+  
+  ctx.fillText(truncatedTitle, padding + 10, padding + 20);
+  ctx.fillStyle = "#A79D9D";
+  ctx.font = fontPath ? "25px 'CustomFont'" : "25px Arial";
+  ctx.fillText(songArtist, padding + 10, padding + 70);
+  ctx.font = fontPath ? "20px 'CustomFont'" : "20px Arial";
+  ctx.fillText(
+    `Requested by: ${trackRequester}`,
+    padding + 10,
+    cardHeight - padding - 30
+  );
+  ctx.save()
+  canvas.toBlob(blob => {
+  const objectURL = URL.createObjectURL(blob);
+  location.href=objectURL;
+}, 'image/png');
+  })
+}
+
+  </script>
+</body>
+</html>
